@@ -26,11 +26,13 @@ let Tlist_Use_Right_Window = 1 "display taglist window on the right
 let Tlist_Display_Prototype = 1 "display full prototype instead of just function name
 let Tlist_Ctags_Cmd = '/bin/ctags'
 
-map <F5> :TlistToggle
-nnoremap <F6> :TlistShowPrototype
+map <F5> :TlistToggle<CR>
+nnoremap <F6> :TlistShowPrototype<CR>
 
 set statusline=[%n]\ %<%f\ %([%1*%M%*%R%Y]%)\ \ \ [%{Tlist_Get_Tagname_By_Line()}]\ %=%-19(\LINE\ [%l/%L]\ COL\ [%02c%03V]%)\ %P
 
+" Ubicacion del diccionario de Pydiction
+let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 
 " Mostrar numero de linea
 set number
