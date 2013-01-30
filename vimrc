@@ -77,6 +77,10 @@ endif
 " también hay que usar este plugin:http://www.vim.org/scripts/script.php?script_id=2390
 set t_Co=256"
 
+" Para que jedi no se active automaticamente al escribir el punto,
+" sino que lo haga con la combinación Ctrl + space
+let g:jedi#popup_on_dot = 0
+
 " Para mover lineas como en SublimeText
 nnoremap <c-s-down> :m+<CR>==
 nnoremap <c-s-up> :m-2<CR>==
