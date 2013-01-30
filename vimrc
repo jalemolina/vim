@@ -10,7 +10,7 @@ set laststatus=2
 " Mapeado LEADER Key
 let g:mapleader=","
 
-" Guardado rapido leader + w
+" Guardado rapido leader + w 
 nmap <leader>w :w!<CR>
 
 " Edicion rapida de .vimrc
