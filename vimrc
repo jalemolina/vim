@@ -7,6 +7,15 @@ filetype plugin indent on
 " Mostrar siempre la barra de status (necesario para Powerline)
 set laststatus=2
 
+" Mapeado LEADER Key
+let g:mapleader=","
+
+" Guardado rapido leader + w
+nmap <leader>w :w!<CR>
+
+" Edicion rapida de .vimrc
+nmap <leader>e :e! ~/.vimrc<CR>
+
 " Mapeado NERDTreeToggle con F8
 map <F8> :NERDTreeToggle<CR>
 " Abrir automaticamente NERDTree al iniciar
@@ -16,7 +25,7 @@ map <F8> :NERDTreeToggle<CR>
 
 " TagBar mapeado en F7
 let g:tagbar_ctags_bin = '/bin/ctags'
-nmap <F7> :TagbarToggle<CR>
+map <F7> :TagbarToggle<CR>
 
 " Ubicacion del diccionario de Pydiction
 let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
