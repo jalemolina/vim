@@ -101,7 +101,7 @@ endif
  
 " para que vim en konsole (kde) use todos los colores
 " también hay que usar este plugin:http://www.vim.org/scripts/script.php?script_id=2390
-set t_Co=256"
+set t_Co=256
 
 " Para que jedi no se active automaticamente al escribir el punto,
 " sino que lo haga con la combinación Ctrl + space
@@ -114,3 +114,61 @@ inoremap <c-s-down> <Esc>:m+<CR>==gi
 inoremap <c-s-up> <Esc>:m-2<CR>==gi
 vnoremap <c-s-down> :m'>+<CR>gv=gv
 vnoremap <c-s-up> :m-2<CR>gv=gv
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
+
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indet
+set wrap "Wrap lines
+
+"--- python formatting help ---
+au BufEnter,BufRead *.py set smartindent
+au BufEnter,BufRead *.py retab " Convierte las tabulaciones existentes en espacios
+
+" markdown
+au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set tw=0
+
+" http://www.brankovukelic.com/post/2091037293/turn-vim-into-powerful-javascript-editor"
+
+" HTML (tab width 2 chr, no wrapping)
+autocmd FileType html set sw=2
+autocmd FileType html set ts=2
+autocmd FileType html set sts=2
+autocmd FileType html set textwidth=0
+
+" XHTML (tab width 2 chr, no wrapping)
+autocmd FileType xhtml set sw=2
+autocmd FileType xhtml set ts=2
+autocmd FileType xhtml set sts=2
+autocmd FileType xhtml set textwidth=0
+
+" CSS (tab width 2 chr, wrap at 79th char)
+autocmd FileType css set sw=2
+autocmd FileType css set ts=2
+autocmd FileType css set sts=2
+
+"remove trailing whitespace
+"http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
+autocmd BufWritePre *.c :%s/\s\+$//e
+autocmd BufWritePre *.cc :%s/\s\+$//e
+autocmd BufWritePre *.cpp :%s/\s\+$//e
+autocmd BufWritePre *.c++ :%s/\s\+$//e
+autocmd BufWritePre *.h :%s/\s\+$//e
+autocmd BufWritePre *.java :%s/\s\+$//e
+autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.pl :%s/\s\+$//e
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" Mapeado pep8 en F6
+let g:pep8_map='<F6>'
