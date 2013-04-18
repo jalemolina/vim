@@ -8,11 +8,11 @@ Instalación
 
 Cómo se instala:
 
-Primero hay que clonar el repo especificando el directorio `~/.vim`.
+Primero hay que clonar el repo especificando el directorio destino `~/.vim`.
 
 `git clone git@github.com:jalemolina/vim.git ~/.vim`
 
-Se crean los enlaces simbólicos:
+Luego, se crean los enlaces simbólicos:
 
 ```
 ln -s ~/.vim/vimrc ~/.vimrc
