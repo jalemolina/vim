@@ -27,6 +27,10 @@ nmap <leader>e :e! ~/.vimrc<CR>
 " Cuando se edita .vimrc, recargarlo
 autocmd! bufwritepost vimrc source ~/.vimrc
 
+" Mostrar TABS y EOL con <leader>i
+:set listchars=tab:\|\ ,trail:·,eol:¬
+nmap <leader>i :set list!<CR>
+
 " Mapeado NERDTreeToggle con F8
 map <F8> :NERDTreeToggle<CR>
 " Abrir automaticamente NERDTree al iniciar
@@ -75,6 +79,10 @@ set showcmd
 
 " muestra barra con completados de linea de comandos
 set wildmenu
+
+" Configurar el comportamientode backspace
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
 " =========================================================
 " === colores y gui ========================================
