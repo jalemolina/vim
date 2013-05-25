@@ -48,6 +48,8 @@ Plugins
 
 ### ZenCoding
 
+### vim-multiple-cursors
+
 Esquema de colores
 ------------------
 
