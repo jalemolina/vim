@@ -94,7 +94,7 @@ else
 endif
 
 " Fuente. Debe estar instalada en el sistema
-set gfn=Inconsolata
+set gfn=Inconsolata\ 11
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
@@ -103,7 +103,8 @@ set guioptions=egmrt
 
 " activar raton
 if has('mouse')
-    set mouse=a
+    set mouse=a         "activa el uso del ratón automáticamente"
+    set mousehide       "oculta el ratón mientras se escribe"
     set selectmode=mouse
 endif
  
@@ -180,3 +181,4 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 " Mapeado pep8 en F6
 let g:pep8_map='<F6>'
+
