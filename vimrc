@@ -63,6 +63,7 @@ set showmatch
 
 " Encoding UTF8
 set encoding=utf-8
+scriptencoding utf-8
 
 try
     lang es
@@ -185,3 +186,5 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " Mapeado pep8 en F6
 let g:pep8_map='<F6>'
 
+" GIT
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0]) " En lugar de volver el cursor a la última posición en el búfer. lo ponemos a la primera línea al editar un mensaje de git commit.
