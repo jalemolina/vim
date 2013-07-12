@@ -206,4 +206,5 @@ if has('persistent_undo')
     set undoreload=10000        "máximo número de líneas por guardar para deshacer cuando se recarga el buffer"
 endif
 
-
+" Configuración del plugin indentLine
+let g:indentLine_char = '┆'

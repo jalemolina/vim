@@ -50,6 +50,8 @@ Plugins
 
 ### vim-multiple-cursors
 
+### indentLine
+
 Esquema de colores
 ------------------
 
