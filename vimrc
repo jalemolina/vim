@@ -21,6 +21,9 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.tmp
 " Se establece en automático leer cuando se modifica un archivo desde el exterior
 set autowrite
 
+" Permite el cambio de buffer sin guardar
+set hidden
+
 " Guardado rapido leader + w
 nmap <leader>w :w!<CR>
 
@@ -30,7 +33,7 @@ nmap <leader>e :e! ~/.vimrc<CR>
 autocmd! bufwritepost vimrc source ~/.vimrc
 
 " Mostrar TABS y EOL con <leader>i
-:set listchars=tab:\|\ ,trail:·,eol:¬
+:set listchars=tab:\|\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
 nmap <leader>i :set list!<CR>
 
 " Mapeado NERDTreeToggle con F8
@@ -55,11 +58,14 @@ set pastetoggle=<F3>          " Press F3 for toggle paste mode
 set cursorline                " Resalta la linea donde se encuentra el cursor
 set colorcolumn=80	      " Marca la columna 80 con una línea resaltada
 
+
+
 " buscar nocase salvo que tenga mayúsculas
 set ignorecase
 set smartcase
 set hlsearch
- 
+set incsearch
+
 " Mostrar el paréntesis opuesto
 set showmatch
 
@@ -77,8 +83,9 @@ nmap <F7> :setlocal spell spelllang=es<CR>
 " empezar a hacer scroll cuando nos acercamos estas líneas a los bordes
 set scrolloff=5
  
-" mostrar el comando
-set showcmd
+" mostrar... 
+set showcmd " el comando
+set showmode " muestra el modo
 
 " muestra barra con completados de linea de comandos
 set wildmenu
