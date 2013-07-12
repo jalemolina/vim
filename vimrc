@@ -1,3 +1,5 @@
+set nocompatible
+set shell=/bin/sh
 execute pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -14,7 +16,7 @@ let g:mapleader=","
 set history=500
 
 " Ignorar estos archivos
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.tmp
 
 " Se establece en automático leer cuando se modifica un archivo desde el exterior
 set autowrite
