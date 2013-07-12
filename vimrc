@@ -8,6 +8,7 @@ filetype plugin indent on
 
 " Mostrar siempre la barra de status (necesario para Powerline)
 set laststatus=2
+set statusline+=%{fugitive#statusline()}\    "GIT"
 
 " Mapeado LEADER Key
 let g:mapleader=","
@@ -208,3 +209,4 @@ endif
 
 " Configuración del plugin indentLine
 let g:indentLine_char = '┆'
+

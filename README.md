@@ -52,6 +52,8 @@ Plugins
 
 ### indentLine
 
+### vim-fugitive
+
 Esquema de colores
 ------------------
 
