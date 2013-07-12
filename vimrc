@@ -98,6 +98,7 @@ set gfn=Inconsolata\ 11
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
+set clipboard=unnamedplus       "Usar el registro + para copiar-pegar"
 set guioptions-=a
 set guioptions=egmrt
 
@@ -140,6 +141,8 @@ set tw=500
 set ai "Auto indent
 set si "Smart indet
 set wrap "Wrap lines
+
+au BufEnter * if bufname("") !~ "^[\A-Za-z0-9\]*://" | lcd %:p:h | endif    "Siempre cambia al directorio del archivo"
 
 "--- python formatting help ---
 au BufEnter,BufRead *.py set smartindent
