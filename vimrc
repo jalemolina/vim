@@ -34,7 +34,7 @@ nmap <leader>e :e! ~/.vimrc<CR>
 autocmd! bufwritepost vimrc source ~/.vimrc
 
 " Mostrar TABS y EOL con <leader>i
-:set listchars=tab:\|\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
+:set listchars=tab:\┆\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
 nmap <leader>i :set list!<CR>
 
 " Mapeado NERDTreeToggle con F8
@@ -210,3 +210,9 @@ endif
 " Configuración del plugin indentLine
 let g:indentLine_char = '┆'
 
+" mapeado cortar, copiar, pegar en portapapeles del sistema
+set go+=a               " lo seleccionado se copia automaticamente al portapapeles
+vmap <C-c> "+yi
+vmap <C-x> "+x
+vmap <C-v> <ESC>"+gP
+imap <C-v> <ESC>"+gP
