@@ -160,9 +160,13 @@ au BufEnter * if bufname("") !~ "^[\A-Za-z0-9\]*://" | lcd %:p:h | endif    "Sie
 au BufEnter,BufRead *.py set smartindent
 au BufEnter,BufRead *.py retab " Convierte las tabulaciones existentes en espacios
 
-" markdown
+" Markdown
 au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set ft=markdown
 au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set tw=0
+
+
+" LaTeX
+au BufEnter,Bufread *.tex,*.latex,*.latexmain set ft=tex
 
 " http://www.brankovukelic.com/post/2091037293/turn-vim-into-powerful-javascript-editor"
 
