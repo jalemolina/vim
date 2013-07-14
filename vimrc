@@ -8,10 +8,11 @@ filetype plugin indent on
 
 " Mostrar siempre la barra de status (necesario para Powerline)
 set laststatus=2
-set statusline+=%{fugitive#statusline()}\    "GIT"
 
 " Mapeado LEADER Key
 let g:mapleader=","
+" Definicion del autor en los snippets
+let g:snips_author="José Alejandro Molina"
 
 " Cuantas lineas del historial VIM debe recordar
 set history=500
@@ -29,12 +30,12 @@ set hidden
 nmap <leader>w :w!<CR>
 
 " Edicion rapida de .vimrc
-nmap <leader>e :e! ~/.vimrc<CR>
+nmap <leader>e :e! ~/.vim/vimrc<CR>
 " Cuando se edita .vimrc, recargarlo
-autocmd! bufwritepost vimrc source ~/.vimrc
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
 " Mostrar TABS y EOL con <leader>i
-:set listchars=tab:\┆\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
+set listchars=tab:\┆\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
 nmap <leader>i :set list!<CR>
 
 " Mapeado NERDTreeToggle con F8
@@ -160,6 +161,7 @@ au BufEnter,BufRead *.py set smartindent
 au BufEnter,BufRead *.py retab " Convierte las tabulaciones existentes en espacios
 
 " markdown
+au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set ft=markdown
 au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set tw=0
 
 " http://www.brankovukelic.com/post/2091037293/turn-vim-into-powerful-javascript-editor"
@@ -216,3 +218,11 @@ vmap <C-c> "+yi
 vmap <C-x> "+x
 vmap <C-v> <ESC>"+gP
 imap <C-v> <ESC>"+gP
+
+let g:Powerline_symbols = 'fancy'
+
+" Configuracion para snippets django
+au BufRead,BufNewFile forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
+au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=html.django-html " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo
+
+
