@@ -37,8 +37,8 @@ hi Debug           guifg=#BCA3A3               gui=bold
 hi Define          guifg=#66D9EF
 hi Delimiter       guifg=#8F8F8F
 hi Float           guifg=#AE81FF
-hi Function        guifg=#A6E22E
-hi Identifier      guifg=#FD971F
+hi Function        guifg=#A6E22E                
+hi Identifier      guifg=#FD971F               gui=italic
 hi Builtin         guifg=#AE81FF               gui=bold
 " }}}
 " Diffs {{{
@@ -102,7 +102,7 @@ hi StatusLine      guifg=#CD5907 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
 hi StorageClass    guifg=#FD971F               gui=italic
 " Structure is the light blue color
-hi Structure       guifg=#66D9EF
+hi Structure       guifg=#66D9EF               gui=bold,italic 
 hi Tag             guifg=#F92672               gui=italic
 hi Title           guifg=#ef5939
 hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
@@ -115,6 +115,9 @@ hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
 hi MyTagListFileName guifg=#F92672 guibg=bg gui=bold
+
+hi return ctermfg=161 cterm=bold guifg=#F92672 gui=none
+match return /return/
 
 " Spelling {{{
 if has("spell")
