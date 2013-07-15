@@ -227,6 +227,6 @@ let g:Powerline_symbols = 'fancy'
 
 " Configuracion para snippets django
 au BufRead,BufNewFile forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
-au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=html.django-html " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo
+au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango
 
 
