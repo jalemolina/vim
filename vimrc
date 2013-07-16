@@ -225,8 +225,9 @@ imap <C-v> <ESC>"+gP
 
 let g:Powerline_symbols = 'fancy'
 
-" Configuracion para snippets django
+" Configuracion para snippets django y coloreado de sintaxis
 au BufRead,BufNewFile forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
 au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango
 
+:imap jj <Esc>           " mapeado jj para pasar de modo inserción al modo normal.
 
