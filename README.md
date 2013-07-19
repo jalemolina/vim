@@ -54,6 +54,8 @@ Plugins
 
 ### vim-fugitive
 
+### MRU
+
 Esquema de colores
 ------------------
 
