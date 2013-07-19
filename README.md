@@ -58,6 +58,8 @@ Plugins
 
 ### Ack
 
+### easymotion
+
 Esquema de colores
 ------------------
 
