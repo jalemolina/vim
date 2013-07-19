@@ -60,6 +60,8 @@ Plugins
 
 ### easymotion
 
+### ctrlp
+
 Esquema de colores
 ------------------
 
