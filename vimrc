@@ -44,6 +44,14 @@ map <F8> :NERDTreeToggle<CR>
 "autocmd vimenter * NERDTree
 " Abrir automaticamente NERDTree al iniciar si no se especifico algun archivo
 " autocmd vimenter * if !argc() | NERDTree | endif
+"ignore some file types
+let g:NERDTreeIgnore=[
+            \'\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
+            \'\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$',
+            \'\.FxCop$','\.scc$','\.vssscc$','\.ini$', '\.pol$',
+            \'\.user$', '\.cd$', '\.Cache$', '\.mdf$', '\.ldf$',
+            \'\.tmp$', '^NTUSER.DAT*', '\.zip$', '\.pdb$', '\.dll$',
+            \'tags', 'bin', 'obj','\.suo$','\.vspscc$']
 
 " TagBar mapeado en F7
 let g:tagbar_ctags_bin = '/bin/ctags'
