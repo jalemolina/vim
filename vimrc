@@ -243,3 +243,8 @@ au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.
 
 :imap jj <Esc>           " mapeado jj para pasar de modo inserción al modo normal.
 
+" Esto es para el autocompletado de Django
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
