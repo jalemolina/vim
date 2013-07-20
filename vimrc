@@ -9,6 +9,10 @@ filetype plugin indent on
 " Mostrar siempre la barra de status (necesario para Powerline)
 set laststatus=2
 
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme='default'
+let g:Powerline_colorscheme='default'
+
 " Mapeado LEADER Key
 let g:mapleader=","
 " Definicion del autor en los snippets
@@ -209,6 +213,8 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 " Mapeado pep8 en F6
 let g:pep8_map='<F6>'
+" syntastic
+let g:syntastic_python_checkers=['python', 'pylint', 'pyflakes', 'flake8']
 
 " GIT
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0]) " En lugar de volver el cursor a la última posición en el búfer. lo ponemos a la primera línea al editar un mensaje de git commit.
@@ -230,8 +236,6 @@ vmap <C-c> "+yi
 vmap <C-x> "+x
 vmap <C-v> <ESC>"+gP
 imap <C-v> <ESC>"+gP
-
-let g:Powerline_symbols = 'fancy'
 
 " Configuracion para snippets django y coloreado de sintaxis
 au BufRead,BufNewFile forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
