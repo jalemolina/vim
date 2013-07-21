@@ -22,7 +22,7 @@ let g:snips_author="José Alejandro Molina"
 set history=500
 
 " Ignorar estos archivos
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.tmp
+set wildignore=*.swp,*.bak,*.pyc,*.pyo,*.class,*.tmp
 
 " Se establece en automático leer cuando se modifica un archivo desde el exterior
 set autowrite
@@ -38,7 +38,7 @@ nmap <leader>e :e! ~/.vim/vimrc<CR>
 " Cuando se edita .vimrc, recargarlo
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
-" Mostrar TABS y EOL con <leader>i
+" Mostrar TABS, EOL, etc. con <leader>i
 set listchars=tab:\┆\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
 nmap <leader>i :set list!<CR>
 
@@ -238,12 +238,12 @@ vmap <C-v> <ESC>"+gP
 imap <C-v> <ESC>"+gP
 
 " Configuracion para snippets django y coloreado de sintaxis
-au BufRead,BufNewFile forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
+au BufRead,BufNewFile admin.py,settings.py,forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
 au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango
 
 :imap jj <Esc>           " mapeado jj para pasar de modo inserción al modo normal.
 
-" Esto es para el autocompletado de Django
+" Esto es para el autocompletado
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
