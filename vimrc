@@ -22,7 +22,7 @@ let g:snips_author="José Alejandro Molina"
 set history=500
 
 " Ignorar estos archivos
-set wildignore=*.swp,*.bak,*.pyc,*.pyo,*.class,*.tmp
+set wildignore=*.swp,*.bak,*.pyc,*.pyo,*.class,*.tmp,*~
 
 " Se establece en automático leer cuando se modifica un archivo desde el exterior
 set autowrite
