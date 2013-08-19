@@ -94,6 +94,9 @@ endtry
 
 nmap <F7> :setlocal spell spelllang=es<CR>
 
+" Setea el idioma para el plugin zencoding
+let g:user_zen_settings = {'lang' : 'es'}
+
 " empezar a hacer scroll cuando nos acercamos estas líneas a los bordes
 set scrolloff=5
  
