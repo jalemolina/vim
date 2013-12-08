@@ -26,41 +26,45 @@ Visto en en el repo de [Sietrix/vim](https://github.com/Sietrix/vim.git "Sietrix
 Plugins
 -------
 
-### delimitMate
+### [ delimitMate ](http://github.com/Raimondi/delimitMate)
 
-### jedi-vim
+### [ jedi-vim ](http://github.com/davidhalter/jedi-vim)
 
-### nerdtree
+### [ nerdtree ](http://github.com/scrooloose/nerdtree.git)
 
-### Pydiction
+### [ Pydiction ](http://www.vim.org/scripts/script.php?script_id=850)
 
-### snipMate
+### [ snipMate ](http://github.com/msanders/snipmate.vim)
 
-### tagbar
+### [ tagbar ](http://majutsushi.github.com/tagbar)
 
-### The NERD Commenter
+### [ The NERD Commenter ](https://github.com/Lokaltog/vim-powerline)
 
-### matchit
+### [ matchit ](http://github.com/tsaleh/vim-matchit)
+http://www.vim.org/scripts/script.php?script_id=39
 
-### powerline
+### [ powerline ](https://github.com/Lokaltog/vim-powerline)
 
-### surround
+### [ surround ](http://github.com/tpope/vim-surround)
 
-### ZenCoding
+### [ emmet (antiguo ZenCoding) ](http://mattn.github.com/emmet-vim)
 
-### vim-multiple-cursors
+### [ vim-multiple-cursors ](http://github.com/terryma/vim-multiple-cursors)
 
-### indentLine
+### [ indentLine ](http://github.com/Yggdroot/indentLine)
 
-### vim-fugitive
+### [ vim-fugitive ](http://github.com/tpope/vim-fugitive)
 
-### MRU
+### [ MRU ](http://github.com/yegappan/mru)
 
-### Ack
+### [ Ack ](http://github.com/mileszs/ack.vim)
 
-### easymotion
+### [ easymotion ](http://github.com/Lokaltog/vim-easymotion)
 
-### ctrlp
+### [ ctrlp ](http://github.com/kien/ctrlp.vim)
+
+### [ vim-table-mode ](http://github.com/dhruvasagar/vim-table-mode) ###
+
 
 Esquema de colores
 ------------------
