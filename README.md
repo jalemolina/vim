@@ -63,7 +63,9 @@ http://www.vim.org/scripts/script.php?script_id=39
 
 ### [ ctrlp ](http://github.com/kien/ctrlp.vim)
 
-### [ vim-table-mode ](http://github.com/dhruvasagar/vim-table-mode) ###
+### [ vim-table-mode ](http://github.com/dhruvasagar/vim-table-mode)
+
+### [vim-markdown](http://github.com/tpope/vim-markdown)
 
 
 Esquema de colores
