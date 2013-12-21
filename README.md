@@ -69,7 +69,9 @@ http://www.vim.org/scripts/script.php?script_id=39
 
 ### [vim-coffe-script](http://github.com/kchmck/vim-coffee-script)
 
-### []()
+### [vim-literate-coffeescript](http://github.com/mintplant/vim-literate-coffeescript)
+
+### [vim-coloresque](https://github.com/gorodinskiy/vim-coloresque)
 
 Esquema de colores
 ------------------
