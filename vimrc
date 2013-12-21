@@ -193,6 +193,15 @@ au BufEnter,Bufread *.tex,*.latex,*.latexmain set ft=tex
 
 " http://www.brankovukelic.com/post/2091037293/turn-vim-into-powerful-javascript-editor"
 
+" Coffee Script
+" https://github.com/kchmck/vim-coffee-script/issues/71
+if has("gui_running")
+    au BufWritePost *.coffee CoffeeLint | cwindow
+else
+    au BufWritePost *.coffee CoffeeLint | cwindow | redraw!
+endif
+
+
 " HTML (tab width 2 chr, no wrapping)
 autocmd FileType html set sw=2
 autocmd FileType html set ts=2
