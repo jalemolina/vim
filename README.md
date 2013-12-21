@@ -67,6 +67,9 @@ http://www.vim.org/scripts/script.php?script_id=39
 
 ### [vim-markdown](http://github.com/tpope/vim-markdown)
 
+### [vim-coffe-script](http://github.com/kchmck/vim-coffee-script)
+
+### []()
 
 Esquema de colores
 ------------------

@@ -197,10 +197,14 @@ au BufEnter,Bufread *.tex,*.latex,*.latexmain set ft=tex
 " https://github.com/kchmck/vim-coffee-script/issues/71
 if has("gui_running")
     au BufWritePost *.coffee CoffeeLint | cwindow
+    au QuickFixCmdPost * nested cwindow
 else
     au BufWritePost *.coffee CoffeeLint | cwindow | redraw!
+    au QuickFixCmdPost * nested cwindow | redraw!
 endif
-
+au BufWritePost *.coffee silent make! " recompila al guardar el archivo
+au FileType litcoffee runtime ftplugin/coffee.vim
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " HTML (tab width 2 chr, no wrapping)
 autocmd FileType html set sw=2
