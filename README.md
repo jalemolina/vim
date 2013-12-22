@@ -75,6 +75,12 @@ http://www.vim.org/scripts/script.php?script_id=39
 
 ### [Better-CSS-Syntax-for-Vim](https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim)
 
+### [vim-less](https://github.com/groenewege/vim-less)
+
+### [scss-syntax](https://github.com/cakebaker/scss-syntax.vim)
+
+Resaltado para SASS
+
 Esquema de colores
 ------------------
 
