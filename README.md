@@ -73,6 +73,8 @@ http://www.vim.org/scripts/script.php?script_id=39
 
 ### [vim-coloresque](https://github.com/gorodinskiy/vim-coloresque)
 
+### [Better-CSS-Syntax-for-Vim](https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim)
+
 Esquema de colores
 ------------------
 
