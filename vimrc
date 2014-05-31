@@ -279,8 +279,12 @@ au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 "autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-map <C-TAB> gt                      " :tabnext próxima pestaña
-imap <C-TAB> <ESC>gt                " :tabnext próxima pestaña
-map <C-S-TAB> gT                    " :tabprev pestaña previa
-imap <C-S-TAB> <ESC>gT              " :tabprev pestaña previa
+" Manejo de pestañas
+" Ctrl + t  -> Pestaña nueva
+" Ctrl + Tab  -> Pestaña siguiente
+" Ctrl + Shift + Tab  -> Pestaña previa
+map <C-TAB> gt
+imap <C-TAB> <ESC>gt
+map <C-S-TAB> gT
+imap <C-S-TAB> <ESC>gT
 imap <C-t> <ESC>:tabnew<CR>i
