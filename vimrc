@@ -119,6 +119,11 @@ set wildmenu
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" El cursor en las líneas cortadas (wrapped lines) al moverse hacia arriba o
+" hacia abajo, pasa al correspondiente renglón y no a la línea siguiente.
+nnoremap j gj
+nnoremap k gk
+
 " =========================================================
 " === colores y gui ========================================
 " =========================================================
