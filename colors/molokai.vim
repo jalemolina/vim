@@ -116,9 +116,6 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 
 hi MyTagListFileName guifg=#F92672 guibg=bg gui=bold
 
-hi return ctermfg=161 cterm=bold guifg=#F92672 gui=none
-match return /return/
-
 " Spelling {{{
 if has("spell")
     hi SpellBad    guisp=#FF0000 gui=undercurl
