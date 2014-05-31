@@ -57,7 +57,7 @@ let g:NERDTreeIgnore=[
             \'\.tmp$', '^NTUSER.DAT*', '\.zip$', '\.pdb$', '\.dll$',
             \'tags', 'bin', 'obj', '\.suo$', '\.vspscc$', '\.*\~']
 
-" TagBar mapeado en F7
+" TagBar mapeado en F9
 let g:tagbar_ctags_bin = '/bin/ctags'
 map <F9> :TagbarToggle<CR>
 
@@ -99,10 +99,10 @@ let g:user_emmet_settings = {
             \    'lang' : 'es',
             \    'html' : {
             \        'filters' : 'html',
-            \        'indentation' : '  '
-            \    },
-            \    'css' : {
-            \        'filters' : 'fc',}
+                \        'indentation' : '  '
+                \    },
+                \    'css' : {
+                \        'filters' : 'fc',}
             \}
 
 " empezar a hacer scroll cuando nos acercamos estas líneas a los bordes
@@ -129,7 +129,7 @@ else
 endif
 
 " Fuente. Debe estar instalada en el sistema
-set gfn=Inconsolata\ 11
+set gfn=Inconsolata\ 12
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
@@ -265,7 +265,7 @@ imap <C-v> <ESC>"+gP
 au BufRead,BufNewFile admin.py,settings.py,forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
 au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango
 
-:imap jj <Esc>           " mapeado jj para pasar de modo inserción al modo normal.
+":imap jj <Esc>           " mapeado jj para pasar de modo inserción al modo normal.
 
 " Esto es para el autocompletado
 "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -273,3 +273,9 @@ au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.
 "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 "autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+map <C-TAB> gt                      " :tabnext próxima pestaña
+imap <C-TAB> <ESC>gt                " :tabnext próxima pestaña
+map <C-S-TAB> gT                    " :tabprev pestaña previa
+imap <C-S-TAB> <ESC>gT              " :tabprev pestaña previa
+imap <C-t> <ESC>:tabnew<CR>i
