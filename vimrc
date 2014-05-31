@@ -293,3 +293,28 @@ imap <C-t> <ESC>:tabnew<CR>i
 vnoremap > >gv
 vnoremap < <gv
 
+" Configuración del plugin Conque Term
+let g:ConqueTerm_CloseOnEnd = 1
+"let g:ConqueTerm_Syntax = 'python'
+function! MyConqueStartup(term)
+
+      " set buffer syntax using the name of the program currently running
+      let syntax_associations = { 'ipython': 'python', 'python': 'python', 'zsh': 'sh', 'bash': 'sh', 'sqlite': 'sql', 'mongo': 'json', 'irb': 'ruby' }
+
+      if has_key(syntax_associations, a:term.program_name)
+          execute 'setlocal syntax=' . syntax_associations[a:term.program_name]
+      else
+          execute 'setlocal syntax=' . a:term.program_name
+      endif
+
+      " shrink window height to 10 rows
+      resize 10
+
+      " silly example of terminal api usage
+      if a:term.program_name == 'mongo'
+          call a:term.writeln('db.version()')
+      endif
+      
+endfunction
+
+call conque_term#register_function('after_startup', 'MyConqueStartup')
