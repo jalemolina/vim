@@ -288,6 +288,7 @@ imap <C-TAB> <ESC>gt
 map <C-S-TAB> gT
 imap <C-S-TAB> <ESC>gT
 imap <C-t> <ESC>:tabnew<CR>i
+nmap <C-t> <ESC>:tabnew<CR>i
 
 " Sangrado en modo visual (sin salir del modo visual)
 vnoremap > >gv
