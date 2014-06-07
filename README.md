@@ -100,3 +100,5 @@ Tema oscuro.
 Otro tema oscuro.
 
 ![nanotech](http://nanotech.nanotechcorp.net/downloads/jellybeans-preview.png)
+
+![noahfrederick](http://noahfrederick.com/wp/wp-content/uploads/vim_hemisu_full-e1321213609938.jpg)
