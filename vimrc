@@ -71,7 +71,7 @@ set title                     " Muestra el título en la barra de título de la 
 set pastetoggle=<F3>          " Press F3 for toggle paste mode
 set cursorline                " Resalta la linea donde se encuentra el cursor
 set colorcolumn=80	      " Marca la columna 80 con una línea resaltada
-
+let &colorcolumn=join(range(81,999),",")
 
 
 " buscar nocase salvo que tenga mayúsculas
@@ -125,7 +125,7 @@ nnoremap j gj
 nnoremap k gk
 
 " =========================================================
-" === colores y gui ========================================
+" === colores y gui =======================================
 " =========================================================
 if has("gui_running")
     colors molokaio
@@ -144,9 +144,10 @@ set guioptions=egmrt
 
 " activar raton
 if has('mouse')
-    set mouse=a         "activa el uso del ratón automáticamente"
-    set mousehide       "oculta el ratón mientras se escribe"
+    set mouse=a          "activa el uso del ratón automáticamente"
+    set mousehide        "oculta el ratón mientras se escribe"
     set selectmode=mouse
+    set mousemodel=popup " right-click pops up context menu
 endif
  
 " para que vim en konsole (kde) use todos los colores
@@ -319,3 +320,4 @@ function! MyConqueStartup(term)
 endfunction
 
 call conque_term#register_function('after_startup', 'MyConqueStartup')
+
