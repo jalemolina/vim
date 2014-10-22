@@ -268,6 +268,9 @@ vmap <C-x> "+x
 "vmap <C-v> <ESC>"+gP
 "imap <C-v> <ESC>"+gP
 
+
+"snipmate setup
+source ~/.vim/bundle/snipMate/snippets/support_functions.vim
 " Configuracion para snippets django y coloreado de sintaxis
 au BufRead,BufNewFile admin.py,settings.py,forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
 au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango
