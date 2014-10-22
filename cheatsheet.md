@@ -20,6 +20,15 @@ vim -p archivo1 archivo2 archivo3  -> abre los archivos en pestañas otro ej: vi
 :ConqueTermSplit [python, bash, zsh, sqlite, etc]
 :ConqueTermSplit python
 
+# Jedi-vim
+<CTRL><SPACE> -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
+<SHIFT>K -> DOCS
+
+# PEP 8
+<F6>
+
+# Pydiction
+<F2> -> trigger y con <C-n> y <C-p> se mueve
 
 # Configuración
 

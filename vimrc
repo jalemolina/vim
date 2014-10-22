@@ -63,6 +63,7 @@ map <F9> :TagbarToggle<CR>
 
 " Ubicacion del diccionario de Pydiction
 let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
+let g:pydiction_menu_height = 20
 
 " Mostrar numero de linea
 set number
@@ -264,8 +265,8 @@ let g:indentLine_char = '┆'
 set go+=a               " lo seleccionado se copia automaticamente al portapapeles
 vmap <C-c> "+yi
 vmap <C-x> "+x
-vmap <C-v> <ESC>"+gP
-imap <C-v> <ESC>"+gP
+"vmap <C-v> <ESC>"+gP
+"imap <C-v> <ESC>"+gP
 
 " Configuracion para snippets django y coloreado de sintaxis
 au BufRead,BufNewFile admin.py,settings.py,forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django

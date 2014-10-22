@@ -58,17 +58,19 @@ if v:version < 700
 endif
 
 
-" Make the Tab key do python code completion:
+" Make the Tab key do python code completion: Ahora lo
+" hace con F2
 inoremap <silent> <buffer> <F2> 
          \<C-R>=<SID>SetVals()<CR>
          \<C-R>=<SID>TabComplete('down')<CR>
          \<C-R>=<SID>RestoreVals()<CR>
 
-" Make Shift+Tab do python code completion in the reverse direction:
-inoremap <silent> <buffer> <S-F2> 
-         \<C-R>=<SID>SetVals()<CR>
-         \<C-R>=<SID>TabComplete('up')<CR>
-         \<C-R>=<SID>RestoreVals()<CR>
+" Make Shift+Tab do python code completion in the reverse direction: Ahora lo
+" hace con F2
+"inoremap <silent> <buffer> <S-F2>
+         "\<C-R>=<SID>SetVals()<CR>
+         "\<C-R>=<SID>TabComplete('up')<CR>
+         "\<C-R>=<SID>RestoreVals()<CR>
 
 
 if !exists("*s:TabComplete")
