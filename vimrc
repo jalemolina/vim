@@ -71,7 +71,7 @@ set numberwidth=1             " usa sólo una columna y un espacio cuando sea po
 set title                     " Muestra el título en la barra de título de la consola
 set pastetoggle=<F3>          " Press F3 for toggle paste mode
 set cursorline                " Resalta la linea donde se encuentra el cursor
-set colorcolumn=80	      " Marca la columna 80 con una línea resaltada
+set colorcolumn=81	      " Marca la columna 81 con una línea resaltada
 let &colorcolumn=join(range(81,999),",")
 
 
@@ -181,7 +181,7 @@ set lbr
 set tw=500
 
 set ai "Auto indent
-set si "Smart indet
+set si "Smart indent
 set wrap "Wrap lines
 
 au BufEnter * if bufname("") !~ "^[\A-Za-z0-9\]*://" | lcd %:p:h | endif    "Siempre cambia al directorio del archivo"
