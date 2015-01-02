@@ -51,6 +51,13 @@ vim -p archivo1 archivo2 archivo3  -> abre los archivos en pestañas otro ej: vi
 ,r -> refactoring (tiene errores)
 ,n -> nombres relacionados, indica donde más se encuentra un nombre
 
+# TableMode
+,tm -> toggle mode (el disparador es |)
+,tt -> autoformatea tabla
+:Tableize/, -> usa ',' como separador
+:Tableize/; -> usa ';' como separador
+,t[hjkl] -> se desplaza por las celdas
+
 # PEP 8
 <F6>
 
