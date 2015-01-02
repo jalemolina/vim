@@ -1,27 +1,39 @@
 # Pestañas
 
 `:tabnew <nombre>` -> abre archivo nombre en otra pestaña
+
 `:tabdo <comando>` -> ejecuta el comando en todas las pestañas
+
 `:tabmove <n>` -> mueve la pestaña a la posición n
+
 `:tabs` -> lista las pestañas abiertas
+
 `ctrl <PageDown>` -> siguiente pestaña (para gvim) gT -> para vim
+
 `crtl + <TAB>` -> idem anterior
+
 `ctrl <PageUp>` -> anterior pestaña (para gvim) gt -> para vim
+
 `crtl + <SHIFT> + <TAB>` -> idem anterior
+
 `ctrl + t` -> Nueva pestaña
+
 `vim -p archivo1 archivo2 archivo3`  -> abre los archivos en pestañas otro ej: `vim -p *.txt`
 
 # Sesiones
 
 `:mksession! <archivo>` -> te guarda tu estado actual en archivo
+
 `:source <archivo>` -> te restaura el estado que este guardado en archivo
 
 # Consola interactiva
 `:ConqueTermSplit [python, python3, bash, zsh, sqlite, etc]`
+
 `:ConqueTermSplit python`
 
 # EasyMotion
 `<número>w` -> avanza esa cantidad de palabras
+
 `<número>f` -> avanza esa cantidad de caracteres
 
     Mapping                     | Details
@@ -45,17 +57,27 @@
 
 # Jedi-vim
 `CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
+
 `<LEADER><SHIFT>K` -> DOCS
+
 `,g` -> goto
+
 `,d` -> goto definition
+
 `,r` -> refactoring (tiene errores)
+
 `,n` -> nombres relacionados, indica donde más se encuentra un nombre
 
 # TableMode
+
 `,tm` -> toggle mode (el disparador es `|`)
+
 `,tt` -> autoformatea tabla
+
 `:Tableize/,` -> usa ',' como separador
+
 `:Tableize/;` -> usa ';' como separador
+
 `,t[hjkl]` -> se desplaza por las celdas
 
 # PEP 8
@@ -67,43 +89,54 @@
 # Esquema de colores
 ## Oscuro - Molokai
 `:colorscheme molokaio`
+
 `:set bg=dark`
 
 ## Claro - Hemisu
 `:colorscheme hemisu`
+
 `:set bg=light`
 
 # Configuración
 
 `,e` -> abre `.vimrc`
+
 `,w` -> guarda el doc
+
 `:w !sudo tee %`   -> guardar un archivo con permisos de admin
 
 ## sintaxis y snipets
 
 `:set ft=django`			->`ft = FyleType`, para varios tipos habilitados, separarlos por puntos ej: `ft=html.django-html`
+
 `:set syntax=python`
 
 ## Sinppets
 ### Globales
 `date` -> año-mes-día o año-mes-día hora:minutos:segundos
+
 `c)`	-> copyright
+
 `gpl`	-> licencia en comentarios tipo c/c++ (`/**/`) o python (`#`)
+
 `lorem`	-> lorem ipsum
 
 ## muestra los espacios arrastrados, marcas de tabulación, retornos de carro y líneas cortadas
 
 `:set list`	-> muestra
+
 `:set nolist`	-> Oculta
 
 # Trabajo duro
 
 `yyp` -> duplica linea
+
 `:set guifont=Inconsolata\ 24`       -> cambia el tamaño de la fuente en caliente
 
 Buscar y reemplazar (expresiones regulares)
 ===========================
 `:%s/'\ '/\r/g`      -> reemplaza ' ' por un retorno de carro
+
 `:%s/'//g`           -> reemplaza ' por nada, o sea lo borra
 
 Plugins
@@ -112,21 +145,33 @@ Plugins
 vimtodo
 ---------------------------
 `\cn`  -> o en modo insert cn<space> nueva tarea
+
 `\cb`  -> nuevo checkbox
+
 `\cc`  -> togle checkbox
 
 ### Surround ###
 #### Modo Normal
 `yss(` -> rodea la línea con '(' o lo que venga después de la segunda 's'
+
 `cs` -> change surround
+
 `ds` -> delete surround
+
 `t` -> es para tags
+
 `iw` -> es para objetos de texto
+
 `"Hello world!"` -> `cs"'` -> `'Hello world!'`
+
 `"Hello world!"` -> `cs"<q>` -> `<q>Hello world!</q>`
+
 `<q>Hello world!</q>` -> `cst"` -> `"Hello world!"`
+
 `"Hello world!"` -> `ds"` -> `Hello world!`
+
 `Hello world!` -> `ysiw]` -> `[Hello] world!`
+
 -> si se coloca `]` se rodea sin espacios, en cambio `[` añade un espacio interno
 
 #### Modo Visual o Línea Visual
