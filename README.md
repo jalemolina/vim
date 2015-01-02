@@ -103,4 +103,4 @@ Otro tema oscuro.
 
 ### [Hemisu](http://noahfrederick.com/vim-color-scheme-hemisu/)
 
-![noahfrederick](http://noahfrederick.com/wp/wp-content/uploads/vim_hemisu_full-e1321213609938.jpg)
+![noahfrederick](https://noahfrederick.com/pi/hemisu-940by754-3e66d0.jpg)
