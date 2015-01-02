@@ -20,9 +20,36 @@ vim -p archivo1 archivo2 archivo3  -> abre los archivos en pestañas otro ej: vi
 :ConqueTermSplit [python, bash, zsh, sqlite, etc]
 :ConqueTermSplit python
 
+# EasyMotion
+<número>w -> avanza esa cantidad de palabras
+<número>f -> avanza esa cantidad de caracteres
+
+    Mapping                   | Details
+    --------------------------|----------------------------------------------
+    <Leader><Leader>f{char}   | Find {char} to the right. See |f|.
+    <Leader><Leader>F{char}   | Find {char} to the left. See |F|.
+    <Leader><Leader>t{char}   | Till before the {char} to the right. See |t|.
+    <Leader><Leader>T{char}   | Till after the {char} to the left. See |T|.
+    <Leader><Leader>w         | Beginning of word forward. See |w|.
+    <Leader><Leader>W         | Beginning of WORD forward. See |W|.
+    <Leader><Leader>b         | Beginning of word backward. See |b|.
+    <Leader><Leader>B         | Beginning of WORD backward. See |B|.
+    <Leader><Leader>e         | End of word forward. See |e|.
+    <Leader><Leader>E         | End of WORD forward. See |E|.
+    <Leader><Leader>ge        | End of word backward. See |ge|.
+    <Leader><Leader>gE        | End of WORD backward. See |gE|.
+    <Leader><Leader>j         | Line downward. See |j|.
+    <Leader><Leader>k         | Line upward. See |k|.
+    <Leader><Leader>n         | Jump to latest "/" or "?" forward. See |n|.
+    <Leader><Leader>N         | Jump to latest "/" or "?" backward. See |N|.
+
 # Jedi-vim
 <CTRL><SPACE> -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
-<SHIFT>K -> DOCS
+<LEADER><SHIFT>K -> DOCS
+,g -> goto
+,d -> goto definition
+,r -> refactoring (tiene errores)
+,n -> nombres relacionados, indica donde más se encuentra un nombre
 
 # PEP 8
 <F6>
@@ -93,12 +120,6 @@ Hello world! -> ysiw] -> [Hello] world!
 
 #### Modo Visual o Línea Visual
 S' -> rodea lo seleccionado
-
-
-
-#### Modo Visual o Línea Visual
-S' -> rodea lo seleccionado
-
 
 Rope
 ---------------------------
