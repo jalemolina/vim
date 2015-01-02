@@ -20,9 +20,48 @@
 `:ConqueTermSplit [python, bash, zsh, sqlite, etc]`
 `:ConqueTermSplit python`
 
+# EasyMotion
+<número>w -> avanza esa cantidad de palabras
+<número>f -> avanza esa cantidad de caracteres
+
+    Mapping                   | Details
+    --------------------------|----------------------------------------------
+    <Leader><Leader>f{char}   | Find {char} to the right. See |f|.
+    <Leader><Leader>F{char}   | Find {char} to the left. See |F|.
+    <Leader><Leader>t{char}   | Till before the {char} to the right. See |t|.
+    <Leader><Leader>T{char}   | Till after the {char} to the left. See |T|.
+    <Leader><Leader>w         | Beginning of word forward. See |w|.
+    <Leader><Leader>W         | Beginning of WORD forward. See |W|.
+    <Leader><Leader>b         | Beginning of word backward. See |b|.
+    <Leader><Leader>B         | Beginning of WORD backward. See |B|.
+    <Leader><Leader>e         | End of word forward. See |e|.
+    <Leader><Leader>E         | End of WORD forward. See |E|.
+    <Leader><Leader>ge        | End of word backward. See |ge|.
+    <Leader><Leader>gE        | End of WORD backward. See |gE|.
+    <Leader><Leader>j         | Line downward. See |j|.
+    <Leader><Leader>k         | Line upward. See |k|.
+    <Leader><Leader>n         | Jump to latest "/" or "?" forward. See |n|.
+    <Leader><Leader>N         | Jump to latest "/" or "?" backward. See |N|.
+
 # Jedi-vim
+<<<<<<< HEAD
 `<CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
 `<SHIFT>K` -> DOCS
+=======
+<CTRL><SPACE> -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
+<LEADER><SHIFT>K -> DOCS
+,g -> goto
+,d -> goto definition
+,r -> refactoring (tiene errores)
+,n -> nombres relacionados, indica donde más se encuentra un nombre
+
+# TableMode
+,tm -> toggle mode (el disparador es |)
+,tt -> autoformatea tabla
+:Tableize/, -> usa ',' como separador
+:Tableize/; -> usa ';' como separador
+,t[hjkl] -> se desplaza por las celdas
+>>>>>>> d831ff0b396f3eb04159041fcf3102d246f3902d
 
 # PEP 8
 `<F6>`
@@ -83,6 +122,7 @@ vimtodo
 
 ### Surround ###
 #### Modo Normal
+<<<<<<< HEAD
 `yss(` -> rodea la línea con '(' o lo que venga después de la segunda 's'
 `cs` -> change surround
 `ds` -> delete surround
@@ -98,6 +138,27 @@ vimtodo
 #### Modo Visual o Línea Visual
 `S'` -> rodea lo seleccionado
 
+=======
+yss( -> rodea la línea con '(' o lo que venga después de la segunda 's'
+cs -> change surround -> 
+ds -> delete surround -> 
+t -> es para tags
+iw -> es para objetos de texto
+"Hello world!" -> cs"' -> 'Hello world!'
+"Hello world!" -> cs"<q> -> <q>Hello world!</q>
+<q>Hello world!</q> -> cst" -> "Hello world!"
+"Hello world!" -> ds" -> Hello world!
+Hello world! -> ysiw] -> [Hello] world!
+-> si se coloca ] se rodea sin espacios, en cambio [ añade un espacio interno
+"Hello world!" -> ds" -> Hello world!
+"Hello world!" -> ds" -> Hello world!
+"Hello world!" -> ds" -> Hello world!
+"Hello world!" -> ds" -> Hello world!
+"Hello world!" -> ds" -> Hello world!
+
+#### Modo Visual o Línea Visual
+S' -> rodea lo seleccionado
+>>>>>>> d831ff0b396f3eb04159041fcf3102d246f3902d
 
 Rope
 ---------------------------

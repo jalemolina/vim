@@ -63,7 +63,7 @@ map <F9> :TagbarToggle<CR>
 
 " Ubicacion del diccionario de Pydiction
 let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
-let g:pydiction_menu_height = 20
+let g:pydiction_menu_height = 10
 
 " Mostrar numero de linea
 set number
@@ -305,7 +305,7 @@ let g:ConqueTerm_CloseOnEnd = 1
 function! MyConqueStartup(term)
 
       " set buffer syntax using the name of the program currently running
-      let syntax_associations = { 'ipython': 'python', 'python': 'python', 'zsh': 'sh', 'bash': 'sh', 'sqlite': 'sql', 'mongo': 'json', 'irb': 'ruby' }
+      let syntax_associations = { 'ipython': 'python', 'python': 'python', 'python3': 'python', 'zsh': 'sh', 'bash': 'sh', 'sqlite': 'sql', 'mongo': 'json', 'irb': 'ruby' }
 
       if has_key(syntax_associations, a:term.program_name)
           execute 'setlocal syntax=' . syntax_associations[a:term.program_name]
