@@ -135,7 +135,7 @@ else
 endif
 
 " Fuente. Debe estar instalada en el sistema
-set gfn=Inconsolata\ 12
+set gfn=Inconsolata\ for\ Powerline\ 12
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
