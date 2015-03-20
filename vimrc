@@ -251,12 +251,12 @@ let g:syntastic_python_checkers=['python', 'pylint', 'pyflakes', 'flake8']
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0]) " En lugar de volver el cursor a la última posición en el búfer. lo ponemos a la primera línea al editar un mensaje de git commit.
 
 " deshacer
-set backup
-if has('persistent_undo')
-    set undofile                "deshacer persistente"
-    set undolevels=1000         "máximo número de cambios posibles de deshacer"
-    set undoreload=10000        "máximo número de líneas por guardar para deshacer cuando se recarga el buffer"
-endif
+"set backup
+"if has('persistent_undo')
+    "set undofile                "deshacer persistente"
+    "set undolevels=1000         "máximo número de cambios posibles de deshacer"
+    "set undoreload=10000        "máximo número de líneas por guardar para deshacer cuando se recarga el buffer"
+"endif
 
 " Configuración del plugin indentLine
 let g:indentLine_char = '┆'
