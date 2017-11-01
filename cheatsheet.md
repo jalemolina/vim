@@ -56,7 +56,7 @@
     `<Leader><Leader>N`         | Jump to latest "/" or "?" backward. See |N|.
 
 # Jedi-vim
-`CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
+`<CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
 
 `<LEADER><SHIFT>K` -> DOCS
 
@@ -123,6 +123,8 @@
 
 ## muestra los espacios arrastrados, marcas de tabulación, retornos de carro y líneas cortadas
 
+`,i` -> Toogle
+
 `:set list`	-> muestra
 
 `:set nolist`	-> Oculta
@@ -150,8 +152,10 @@ vimtodo
 
 `\cc`  -> togle checkbox
 
-### Surround ###
-#### Modo Normal
+Surround
+---------------------------
+
+### Modo Normal
 `yss(` -> rodea la línea con '(' o lo que venga después de la segunda 's'
 
 `cs` -> change surround
@@ -174,8 +178,62 @@ vimtodo
 
 -> si se coloca `]` se rodea sin espacios, en cambio `[` añade un espacio interno
 
-#### Modo Visual o Línea Visual
+### Modo Visual o Línea Visual
 `S'` -> rodea lo seleccionado
+
+The NERD Commenter
+---------------------------
+
+`,cc` -> Comenta la línea actual o el texto seleccionado en modo VISUAL.
+
+`,cn` -> 
+Same as |NERDComComment| but forces nesting.
+
+,c<space> |NERDComToggleComment| 
+Toggles the comment state of the selected line(s). If the topmost selected
+line is commented, all selected lines are uncommented and vice versa.
+
+,cm |NERDComMinimalComment| 
+Comments the given lines using only one set of multipart delimiters if
+possible. 
+
+,ci |NERDComInvertComment| 
+Toggles the comment state of the selected line(s) individually. Each selected
+line that is commented is uncommented and vice versa.
+
+,cs |NERDComSexyComment| 
+Comments out the selected lines ``sexily''
+
+,cy |NERDComYankComment|
+Same as |NERDComComment| except that the commented line(s) are yanked
+before commenting.
+
+,c$ |NERDComEOLComment| 
+Comments the current line from the cursor to the end of line.
+
+,cA |NERDComAppendComment| 
+Adds comment delimiters to the end of line and goes into insert mode between
+them.
+
+,cI |NERDComPrependComment| 
+Adds comment delimiters to the start of line and goes into insert mode between
+them.
+
+|NERDComInsertComment| 
+Adds comment delimiters at the current cursor position and inserts between.
+Disabled by default.
+
+,ca |NERDComAltDelim| 
+Switches to the alternative set of delimiters.
+
+,cl OR ,cr OR ,cb |NERDComAlignedComment| 
+Same as |NERDComComment| except that the delimiters are aligned down the
+left side (,cl), the right side (,cr) or both sides
+(,cb).
+
+,cu |NERDComUncommentLine| 
+Uncomments the selected line(s).
+
 
 Rope
 ---------------------------

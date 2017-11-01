@@ -1,17 +1,13 @@
 set nocompatible
 set shell=/bin/sh
 execute pathogen#infect()
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
 " Mostrar siempre la barra de status (necesario para Powerline)
 set laststatus=2
-
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_theme='default'
-let g:Powerline_colorscheme='default'
 
 " Mapeado LEADER Key
 let g:mapleader=","
@@ -42,6 +38,13 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 set listchars=tab:\┆\ ,trail:•,eol:↵,extends:⟫,precedes:⟪,nbsp:.  "|˃»ʾ჻᛫›‣•⁋…‧․↔↩↹↵↣↦→⇆⇔⇥⇢≋⊳⋗⋙⋯〉⌲⤶⏎⏩⏭␣⑅▶▷▸▹►▻☛☞☠☢☣☯☹☺☻⚛⚮⚭⚯❭❯❱➔➜➣➢➤⥅⧎⧓⧒⧑⫷⫸⪢⪡⪦⪧⩥⩤⧐⧏⟾⟫⟪⟨⟩❬❭❮❯❰❱⏮⏭⏪⏩≫≪⇇⇉
 nmap <leader>i :set list!<CR>
 
+let g:airline_highlighting_cache = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline_theme = 'base16_monokai'
+
 " Mapeado NERDTreeToggle con F8
 map <F8> :NERDTreeToggle<CR>
 " Abrir automaticamente NERDTree al iniciar
@@ -49,6 +52,11 @@ map <F8> :NERDTreeToggle<CR>
 " Abrir automaticamente NERDTree al iniciar si no se especifico algun archivo
 " autocmd vimenter * if !argc() | NERDTree | endif
 "ignore some file types
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeIgnore=[
             \'\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
             \'\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$',
@@ -135,13 +143,13 @@ else
 endif
 
 " Fuente. Debe estar instalada en el sistema
-set gfn=Inconsolata\ for\ Powerline\ 12
+set gfn=Inconsolata\ NF\ 12
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
 set clipboard=unnamedplus       "Usar el registro + para copiar-pegar"
 set guioptions-=a
-set guioptions=egmrt
+set guioptions=grt		"e -> barra de herramientas. m -> menu.
 
 " activar raton
 if has('mouse')
