@@ -34,8 +34,6 @@
 # EasyMotion
 `<número>w` -> avanza esa cantidad de palabras
 
-`<número>f` -> avanza esa cantidad de caracteres
-
     Mapping                     | Details
     ----------------------------|----------------------------------------------
     `<Leader><Leader>f{char}`   | Find {char} to the right. See |f|.
