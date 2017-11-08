@@ -239,6 +239,12 @@ au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set tw=0
 " LaTeX
 au BufEnter,Bufread *.tex,*.latex,*.latexmain set ft=tex
 
+" Remiendo para el problema del acento en la 'e' dentro de latex.
+autocmd FileType tex inoremap <expr> ee Acento()
+func! Acento()
+    return 'é'  
+endfunc
+
 " http://www.brankovukelic.com/post/2091037293/turn-vim-into-powerful-javascript-editor"
 
 " Coffee Script
