@@ -82,8 +82,12 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 map <F8> :NERDTreeToggle<CR>
 " Abrir automaticamente NERDTree al iniciar
 "autocmd vimenter * NERDTree
+let g:nerdtree_tabs_open_on_gui_startup = 2
+let g:nerdtree_tabs_open_on_console_startup = 2
+
 " Abrir automaticamente NERDTree al iniciar si no se especifico algun archivo
 " autocmd vimenter * if !argc() | NERDTree | endif
+
 "ignore some file types
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
