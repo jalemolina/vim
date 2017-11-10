@@ -78,6 +78,9 @@
 
 `,t[hjkl]` -> se desplaza por las celdas
 
+# Cambiar capitalización en modo visual
+`~` -> Lo seleccionado en modo visual cambia a mayúscula, minúscula, título.
+
 # PEP 8
 `<F6>`
 
