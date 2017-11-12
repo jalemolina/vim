@@ -78,8 +78,6 @@
 
 `,t[hjkl]` -> se desplaza por las celdas
 
-# Cambiar capitalización en modo visual
-`~` -> Lo seleccionado en modo visual cambia a mayúscula, minúscula, título.
 
 # PEP 8
 `<F6>`
@@ -114,6 +112,7 @@
 
 ## Sinppets
 ### Globales
+
 `date` -> año-mes-día o año-mes-día hora:minutos:segundos
 
 `c)`	-> copyright
@@ -135,6 +134,24 @@
 `yyp` -> duplica linea
 
 `:set guifont=Inconsolata\ 24`       -> cambia el tamaño de la fuente en caliente
+
+## Autocompletado
+<C-n> -> de palabras siguiente
+<C-p> -> de palabras anterior
+<C-x><C-f> -> de path (al desplegarse el menú son válidas las dos anteriores)
+
+## Correción ortográfica
+
+F7 -> activa corrector ortográfico
+<C-x>s -> en modo insertar muestra sugerencias de palabras
+zg -> agrega palabras al diccionario
+zw -> quita palabras del diccionario
+[s anterior palabra mal escrita
+]s siguiente palabra mal escrita
+
+## Cambiar capitalización en modo visual
+
+`~` -> Lo seleccionado en modo visual cambia a mayúscula, minúscula, título.
 
 Buscar y reemplazar (expresiones regulares)
 ===========================
