@@ -1,0 +1,27 @@
+==============================================================================
+*rainbow_csv* - highlight columns in csv/tsv/*sv files in different colors
+
+==============================================================================
+
+rainbow_csv: minimalistic but powerful vim plugin for viewing csv/tsv/*sv
+files and executing SQL "select" queries.
+
+1. Overview       |overview|
+
+==============================================================================
+1. Overview                                                        *overview*
+
+
+Rainbow CSV: minimalistic but powerful vim plugin for viewing csv/tsv files
+and executing SQL "select" queries.
+
+The plugin highlights csv columns in different rainbow colors.
+Rainbow csv also allows user to run simple "select" queries in SQL-like RBQL 
+language.
+To enter a "select" query, press F5. To execute the query press F5 again. 
+If you want to replace the source table with select results, press F5 again.
+
+For more info see README.md or visit https://github.com/mechatroner/rainbow_csv 
+
+
+vim:tw=78:ts=8:ft=help
