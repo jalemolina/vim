@@ -114,7 +114,7 @@ let g:pydiction_menu_height = 10
 set number
 set numberwidth=1             " usa sólo una columna y un espacio cuando sea posible
 set title                     " Muestra el título en la barra de título de la consola
-set pastetoggle=<F3>          " Press F3 for toggle paste mode
+"set pastetoggle=<F3>          " Press F3 for toggle paste mode
 set cursorline                " Resalta la linea donde se encuentra el cursor
 set colorcolumn=81	      " Marca la columna 81 con una línea resaltada
 let &colorcolumn=join(range(81,999),",")
@@ -202,7 +202,9 @@ set t_Co=256
 
 " Para que jedi no se active automaticamente al escribir el punto,
 " sino que lo haga con la combinación Ctrl + space
-let g:jedi#popup_on_dot = 0
+"let g:jedi#popup_on_dot = 0
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=jedi#completions
 
 " Para mover lineas como en SublimeText
 nnoremap <c-s-down> :m+<CR>==
@@ -314,8 +316,8 @@ let g:indentLine_char = '┆'
 
 " mapeado cortar, copiar, pegar en portapapeles del sistema
 set go+=a               " lo seleccionado se copia automaticamente al portapapeles
-vmap <C-c> "+yi
-vmap <C-x> "+x
+"vmap <C-c> "+yi
+"vmap <C-x> "+x
 "vmap <C-v> <ESC>"+gP
 "imap <C-v> <ESC>"+gP
 
