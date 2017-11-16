@@ -297,8 +297,6 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 " Mapeado pep8 en F6
 let g:pep8_map='<F6>'
-" syntastic
-let g:syntastic_python_checkers=['python', 'pylint', 'pyflakes', 'flake8']
 
 " GIT
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0]) " En lugar de volver el cursor a la última posición en el búfer. lo ponemos a la primera línea al editar un mensaje de git commit.
@@ -394,3 +392,12 @@ function! TwiddleCase(str)
   return result
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
