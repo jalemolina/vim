@@ -231,8 +231,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-imap <c-space> <Plug>(asyncomplete_force_refresh)
-
 au BufEnter * if bufname("") !~ "^[\A-Za-z0-9\]*://" | lcd %:p:h | endif    "Siempre cambia al directorio del archivo"
 
 "--- python formatting help ---
