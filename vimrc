@@ -231,11 +231,17 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
 au BufEnter * if bufname("") !~ "^[\A-Za-z0-9\]*://" | lcd %:p:h | endif    "Siempre cambia al directorio del archivo"
 
 "--- python formatting help ---
 au BufEnter,BufRead *.py set smartindent
 au BufEnter,BufRead *.py retab " Convierte las tabulaciones existentes en espacios
+augroup python_syntax_extra " Resalta la palabra self
+  autocmd!
+  autocmd! Syntax python :syn keyword pythonSelf self
+augroup END
 
 " Markdown
 au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set ft=markdown

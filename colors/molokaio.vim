@@ -101,6 +101,7 @@ hi Statement       guifg=#F92672               gui=bold
 hi StatusLine      guifg=#CD5907 guibg=fg
 hi StatusLineNC    guifg=#808080 guibg=#080808
 hi StorageClass    guifg=#FD971F               gui=italic
+hi pythonSelf      guifg=#66D9EF cterm=italic  gui=italic ctermfg=68
 " Structure is the light blue color
 hi Structure       guifg=#66D9EF               gui=bold,italic 
 hi Tag             guifg=#F92672               gui=italic
