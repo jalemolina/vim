@@ -104,3 +104,10 @@ Otro tema oscuro.
 ### [Hemisu](http://noahfrederick.com/vim-color-scheme-hemisu/)
 
 ![noahfrederick](https://noahfrederick.com/pi/hemisu-940by754-3e66d0.jpg)
+
+Requerimientos
+==============
+
+```
+pip install jedi isort
+```

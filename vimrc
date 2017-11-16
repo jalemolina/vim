@@ -240,6 +240,7 @@ augroup python_syntax_extra " Resalta la palabra self
   autocmd!
   autocmd! Syntax python :syn keyword pythonSelf self
 augroup END
+let g:vim_isort_map = '<C-i>' " ordena los imports seleccionados en modo visual
 
 " Markdown
 au BufEnter,Bufread *.mkd,*.md,*.mdown,*.markdown set ft=markdown
