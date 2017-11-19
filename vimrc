@@ -329,6 +329,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" ALE 
+let g:ale_sign_error = ' ' 
+let g:ale_sign_warning = ' '
+
 " Configuracion para snippets django y coloreado de sintaxis
 au BufRead,BufNewFile admin.py,settings.py,forms.py,urls.py,models.py,views.py,tests.py set ft=python.django " activa ambos snippets, python y django
 au BufRead,BufNewFile */templates/*.html,*/plantillas/*.html set ft=django-html.htmldjango " activa ambos snippets, html y django-html si los archivo html estan dentro del directorio [templates,plantillas] o subdirectorio del mismo. Ademas del resaltado de sintaxis de plantilla htmldjango

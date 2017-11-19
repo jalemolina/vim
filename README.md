@@ -109,5 +109,5 @@ Requerimientos
 ==============
 
 ```
-pip install jedi isort
+pip3 install jedi isort pylint
 ```
