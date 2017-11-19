@@ -126,7 +126,7 @@ endif
 "========================================================================
 
 if !exists('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol')
-  let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
+  let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ' '
 endif
 
 if !exists('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol')
@@ -136,15 +136,15 @@ endif
 if !exists('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol')
   if g:DevIconsEnableFoldersOpenClose
     " use new glyph
-    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ' '
   else
     " use older glyph
-    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+    let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ' '
   endif
 endif
 
 if !exists('g:DevIconsDefaultFolderOpenSymbol')
-    let g:DevIconsDefaultFolderOpenSymbol = ''
+    let g:DevIconsDefaultFolderOpenSymbol = ' '
 endif
 
 " functions {{{1
@@ -192,136 +192,136 @@ endfunction
 function! s:setDictionaries()
 
   let s:file_node_extensions = {
-        \ 'styl'     : '',
-        \ 'sass'     : '',
-        \ 'scss'     : '',
-        \ 'htm'      : '',
-        \ 'html'     : '',
-        \ 'slim'     : '',
-        \ 'ejs'      : '',
-        \ 'css'      : '',
-        \ 'less'     : '',
-        \ 'md'       : '',
-        \ 'markdown' : '',
-        \ 'rmd'      : '',
-        \ 'json'     : '',
-        \ 'js'       : '',
-        \ 'jsx'      : '',
-        \ 'rb'       : '',
-        \ 'php'      : '',
-        \ 'py'       : '',
-        \ 'pyc'      : '',
-        \ 'pyo'      : '',
-        \ 'pyd'      : '',
-        \ 'coffee'   : '',
-        \ 'mustache' : '',
-        \ 'hbs'      : '',
-        \ 'conf'     : '',
-        \ 'ini'      : '',
-        \ 'yml'      : '',
-        \ 'yaml'     : '',
-        \ 'bat'      : '',
-        \ 'jpg'      : '',
-        \ 'jpeg'     : '',
-        \ 'bmp'      : '',
-        \ 'png'      : '',
-        \ 'gif'      : '',
-        \ 'ico'      : '',
-        \ 'twig'     : '',
-        \ 'cpp'      : '',
-        \ 'c++'      : '',
-        \ 'cxx'      : '',
-        \ 'cc'       : '',
-        \ 'cp'       : '',
-        \ 'c'        : '',
-        \ 'h'        : '',
-        \ 'hpp'      : '',
-        \ 'hxx'      : '',
-        \ 'hs'       : '',
-        \ 'lhs'      : '',
-        \ 'lua'      : '',
-        \ 'java'     : '',
-        \ 'sh'       : '',
-        \ 'fish'     : '',
-        \ 'bash'     : '',
-        \ 'zsh'      : '',
-        \ 'ksh'      : '',
-        \ 'csh'      : '',
-        \ 'awk'      : '',
-        \ 'ps1'      : '',
-        \ 'ml'       : 'λ',
-        \ 'mli'      : 'λ',
-        \ 'diff'     : '',
-        \ 'db'       : '',
-        \ 'sql'      : '',
-        \ 'dump'     : '',
-        \ 'clj'      : '',
-        \ 'cljc'     : '',
-        \ 'cljs'     : '',
-        \ 'edn'      : '',
-        \ 'scala'    : '',
-        \ 'go'       : '',
-        \ 'dart'     : '',
-        \ 'xul'      : '',
-        \ 'sln'      : '',
-        \ 'suo'      : '',
-        \ 'pl'       : '',
-        \ 'pm'       : '',
-        \ 't'        : '',
-        \ 'rss'      : '',
-        \ 'f#'       : '',
-        \ 'fsscript' : '',
-        \ 'fsx'      : '',
-        \ 'fs'       : '',
-        \ 'fsi'      : '',
-        \ 'rs'       : '',
-        \ 'rlib'     : '',
-        \ 'd'        : '',
-        \ 'erl'      : '',
-        \ 'hrl'      : '',
-        \ 'vim'      : '',
-        \ 'ai'       : '',
-        \ 'psd'      : '',
-        \ 'psb'      : '',
-        \ 'ts'       : '',
-        \ 'tsx'      : '',
-        \ 'jl'       : '',
-        \ 'pp'       : ''
+        \ 'styl'     : ' ',
+        \ 'sass'     : ' ',
+        \ 'scss'     : ' ',
+        \ 'htm'      : ' ',
+        \ 'html'     : ' ',
+        \ 'slim'     : ' ',
+        \ 'ejs'      : ' ',
+        \ 'css'      : ' ',
+        \ 'less'     : ' ',
+        \ 'md'       : ' ',
+        \ 'markdown' : ' ',
+        \ 'rmd'      : ' ',
+        \ 'json'     : ' ',
+        \ 'js'       : ' ',
+        \ 'jsx'      : ' ',
+        \ 'rb'       : ' ',
+        \ 'php'      : ' ',
+        \ 'py'       : ' ',
+        \ 'pyc'      : ' ',
+        \ 'pyo'      : ' ',
+        \ 'pyd'      : ' ',
+        \ 'coffee'   : ' ',
+        \ 'mustache' : ' ',
+        \ 'hbs'      : ' ',
+        \ 'conf'     : ' ',
+        \ 'ini'      : ' ',
+        \ 'yml'      : ' ',
+        \ 'yaml'     : ' ',
+        \ 'bat'      : ' ',
+        \ 'jpg'      : ' ',
+        \ 'jpeg'     : ' ',
+        \ 'bmp'      : ' ',
+        \ 'png'      : ' ',
+        \ 'gif'      : ' ',
+        \ 'ico'      : ' ',
+        \ 'twig'     : ' ',
+        \ 'cpp'      : ' ',
+        \ 'c++'      : ' ',
+        \ 'cxx'      : ' ',
+        \ 'cc'       : ' ',
+        \ 'cp'       : ' ',
+        \ 'c'        : ' ',
+        \ 'h'        : ' ',
+        \ 'hpp'      : ' ',
+        \ 'hxx'      : ' ',
+        \ 'hs'       : ' ',
+        \ 'lhs'      : ' ',
+        \ 'lua'      : ' ',
+        \ 'java'     : ' ',
+        \ 'sh'       : ' ',
+        \ 'fish'     : ' ',
+        \ 'bash'     : ' ',
+        \ 'zsh'      : ' ',
+        \ 'ksh'      : ' ',
+        \ 'csh'      : ' ',
+        \ 'awk'      : ' ',
+        \ 'ps1'      : ' ',
+        \ 'ml'       : 'λ ',
+        \ 'mli'      : 'λ ',
+        \ 'diff'     : ' ',
+        \ 'db'       : ' ',
+        \ 'sql'      : ' ',
+        \ 'dump'     : ' ',
+        \ 'clj'      : ' ',
+        \ 'cljc'     : ' ',
+        \ 'cljs'     : ' ',
+        \ 'edn'      : ' ',
+        \ 'scala'    : ' ',
+        \ 'go'       : ' ',
+        \ 'dart'     : ' ',
+        \ 'xul'      : ' ',
+        \ 'sln'      : ' ',
+        \ 'suo'      : ' ',
+        \ 'pl'       : ' ',
+        \ 'pm'       : ' ',
+        \ 't'        : ' ',
+        \ 'rss'      : ' ',
+        \ 'f#'       : ' ',
+        \ 'fsscript' : ' ',
+        \ 'fsx'      : ' ',
+        \ 'fs'       : ' ',
+        \ 'fsi'      : ' ',
+        \ 'rs'       : ' ',
+        \ 'rlib'     : ' ',
+        \ 'd'        : ' ',
+        \ 'erl'      : ' ',
+        \ 'hrl'      : ' ',
+        \ 'vim'      : ' ',
+        \ 'ai'       : ' ',
+        \ 'psd'      : ' ',
+        \ 'psb'      : ' ',
+        \ 'ts'       : ' ',
+        \ 'tsx'      : ' ',
+        \ 'jl'       : ' ',
+        \ 'pp'       : ' '
         \}
 
   let s:file_node_exact_matches = {
         \ 'exact-match-case-sensitive-1.txt' : 'X1',
         \ 'exact-match-case-sensitive-2'     : 'X2',
-        \ 'gruntfile.coffee'                 : '',
-        \ 'gruntfile.js'                     : '',
-        \ 'gruntfile.ls'                     : '',
-        \ 'gulpfile.coffee'                  : '',
-        \ 'gulpfile.js'                      : '',
-        \ 'gulpfile.ls'                      : '',
-        \ 'dropbox'                          : '',
-        \ '.ds_store'                        : '',
-        \ '.gitconfig'                       : '',
-        \ '.gitignore'                       : '',
-        \ '.bashrc'                          : '',
-        \ '.zshrc'                           : '',
-        \ '.vimrc'                           : '',
-        \ '.bashprofile'                     : '',
-        \ 'favicon.ico'                      : '',
-        \ 'license'                          : '',
-        \ 'node_modules'                     : '',
-        \ 'react.jsx'                        : '',
-        \ 'procfile'                         : '',
+        \ 'gruntfile.coffee'                 : ' ',
+        \ 'gruntfile.js'                     : ' ',
+        \ 'gruntfile.ls'                     : ' ',
+        \ 'gulpfile.coffee'                  : ' ',
+        \ 'gulpfile.js'                      : ' ',
+        \ 'gulpfile.ls'                      : ' ',
+        \ 'dropbox'                          : ' ',
+        \ '.ds_store'                        : ' ',
+        \ '.gitconfig'                       : ' ',
+        \ '.gitignore'                       : ' ',
+        \ '.bashrc'                          : ' ',
+        \ '.zshrc'                           : ' ',
+        \ '.vimrc'                           : ' ',
+        \ '.bashprofile'                     : ' ',
+        \ 'favicon.ico'                      : ' ',
+        \ 'license'                          : ' ',
+        \ 'node_modules'                     : ' ',
+        \ 'react.jsx'                        : ' ',
+        \ 'procfile'                         : ' ',
         \}
 
   let s:file_node_pattern_matches = {
-        \ '.*jquery.*\.js$'       : '',
-        \ '.*angular.*\.js$'      : '',
-        \ '.*backbone.*\.js$'     : '',
-        \ '.*require.*\.js$'      : '',
-        \ '.*materialize.*\.js$'  : '',
-        \ '.*materialize.*\.css$' : '',
-        \ '.*mootools.*\.js$'     : '',
-        \ 'Vagrantfile$'          : ''
+        \ '.*jquery.*\.js$'       : ' ',
+        \ '.*angular.*\.js$'      : ' ',
+        \ '.*backbone.*\.js$'     : ' ',
+        \ '.*require.*\.js$'      : ' ',
+        \ '.*materialize.*\.js$'  : ' ',
+        \ '.*materialize.*\.css$' : ' ',
+        \ '.*mootools.*\.js$'     : ' ',
+        \ 'Vagrantfile$'          : ' '
         \}
 
   if !exists('g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols')
@@ -660,15 +660,15 @@ function! WebDevIconsGetFileFormatSymbol(...)
   endif
 
   if &fileformat ==? 'dos'
-    let fileformat = ''
+    let fileformat = ' '
   elseif &fileformat ==? 'unix'
     if s:isDarwin()
-      let fileformat = ''
+      let fileformat = ' '
     else
-      let fileformat = ''
+      let fileformat = ' '
     endif
   elseif &fileformat ==? 'mac'
-    let fileformat = ''
+    let fileformat = ' '
   endif
 
   " Temporary (hopefully) fix for glyph issues in gvim (proper fix is with the
