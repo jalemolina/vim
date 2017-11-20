@@ -114,8 +114,10 @@ let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 let g:pydiction_menu_height = 10
 
 " Mostrar numero de linea
-set number
+set number relativenumber
 set numberwidth=1             " usa sólo una columna y un espacio cuando sea posible
+map <F4> :set number norelativenumber!<CR>
+
 set title                     " Muestra el título en la barra de título de la consola
 "set pastetoggle=<F3>          " Press F3 for toggle paste mode
 set cursorline                " Resalta la linea donde se encuentra el cursor
@@ -413,3 +415,4 @@ packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
+
