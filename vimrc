@@ -26,6 +26,9 @@ set autowrite
 " Permite el cambio de buffer sin guardar
 set hidden
 
+" Los mismos colores de gui en la terminal
+set termguicolors
+
 " Guardado rapido leader + w
 nmap <leader>w :w!<CR>
 
