@@ -89,7 +89,7 @@ endif
 if !exists('g:tagbar_iconchars')
     if has('multi_byte') && has('unix') && &encoding == 'utf-8' &&
      \ (empty(&termencoding) || &termencoding == 'utf-8')
-        let g:tagbar_iconchars = ['▶', '▼']
+        let g:tagbar_iconchars = ['▶ ', '▼ ']
     else
         let g:tagbar_iconchars = ['+', '-']
     endif
