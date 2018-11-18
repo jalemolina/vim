@@ -185,7 +185,27 @@ else
 endif
 
 " Fuente. Debe estar instalada en el sistema
+
+" guifont size + 1
+function! ZoomIn()
+  let l:gf_size_whole = matchstr(&guifont, '\( \)\@<=\d\+$')
+  let l:gf_size_whole = l:gf_size_whole + 1
+  let l:new_font_size = ' '.l:gf_size_whole
+  let &guifont = substitute(&guifont, ' \d\+$', l:new_font_size, '')
+endfunction
+
+" guifont size - 1
+function! ZoomOut()
+  let l:gf_size_whole = matchstr(&guifont, '\( \)\@<=\d\+$')
+  let l:gf_size_whole = l:gf_size_whole - 1
+  let l:new_font_size = ' '.l:gf_size_whole
+  let &guifont = substitute(&guifont, ' \d\+$', l:new_font_size, '')
+endfunction
+
 set gfn=Inconsolata\ NF\ 12
+
+map <C-ScrollWheelUp> :call ZoomIn()<CR>
+map <C-ScrollWheelDown> :call ZoomOut()<CR>
 
 " opciones graficas de gvim: lo copiado en visual va al clipboard; usar icono
 " incluir barra de herramientas
@@ -205,6 +225,7 @@ endif
 " también hay que usar este plugin:http://www.vim.org/scripts/script.php?script_id=2390
 set t_Co=256
 
+" ATENCIÓN: jedi fué quitado
 " Para que jedi no se active automaticamente al escribir el punto,
 " sino que lo haga con la combinación Ctrl + space
 "let g:jedi#popup_on_dot = 0
@@ -372,7 +393,7 @@ let g:ConqueTerm_CloseOnEnd = 1
 function! MyConqueStartup(term)
 
       " set buffer syntax using the name of the program currently running
-      let syntax_associations = { 'ipython': 'python', 'python': 'python', 'python3': 'python', 'zsh': 'sh', 'bash': 'sh', 'sqlite': 'sql', 'mongo': 'json', 'irb': 'ruby' }
+      let syntax_associations = { 'ipython': 'python', 'ipython3': 'python', 'python': 'python', 'python3': 'python', 'zsh': 'sh', 'bash': 'sh', 'sqlite': 'sql', 'mongo': 'json', 'irb': 'ruby' }
 
       if has_key(syntax_associations, a:term.program_name)
           execute 'setlocal syntax=' . syntax_associations[a:term.program_name]

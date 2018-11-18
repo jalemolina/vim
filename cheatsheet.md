@@ -54,7 +54,7 @@
     `<Leader><Leader>N`         | Jump to latest "/" or "?" backward. See |N|.
 
 # Jedi-vim
-`<CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)
+<!--`<CTRL><SPACE>` -> muestra autocompletado y docs (útil usarlo luego de un punto Ej: os.)-->
 
 `<LEADER><SHIFT>K` -> DOCS
 
